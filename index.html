@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>27 Nömrəli Tam Orta Məktəb — Bakı</title>
+  <title>27 Nömrəli Tam Orta Məktəb</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Mulish:wght@300;400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap"
     rel="stylesheet" />
   <style>
     :root {
       --navy: #0a1628;
       --blue: #1a3a6e;
-      --gold: #c9a84c;
-      --gold-light: #e8c97a;
-      --cream: #f8f4ec;
+      --gold: #c8a84b;
+      --gold-light: #e8c96e;
+      --cream: #f5f0e8;
       --white: #ffffff;
-      --gray: #6b7280;
-      --light-bg: #f1eeea;
+      --light-gray: #f9f7f4;
     }
 
     * {
@@ -31,462 +31,252 @@
     }
 
     body {
-      font-family: 'Mulish', sans-serif;
+      font-family: 'Nunito', sans-serif;
       background: var(--cream);
       color: var(--navy);
       overflow-x: hidden;
     }
 
-    /* NAV */
-    nav {
+    #mainNav {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 100;
-      background: rgba(10, 22, 40, 0.97);
-      backdrop-filter: blur(10px);
-      padding: 0 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
+      background: rgba(10, 22, 40, 0.97) !important;
+      backdrop-filter: blur(12px);
       border-bottom: 2px solid var(--gold);
+      min-height: 68px;
     }
 
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
+      gap: 12px;
+      text-decoration: none;
     }
 
-    .nav-logo .badge {
+    .nav-logo-badge {
       width: 44px;
       height: 44px;
-      border-radius: 50%;
       background: var(--gold);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Playfair Display', serif;
+      font-size: 18px;
       font-weight: 900;
-      font-size: 1.15rem;
       color: var(--navy);
       flex-shrink: 0;
     }
 
-    .nav-logo span {
-      font-family: 'Playfair Display', serif;
+    .nav-logo-text strong {
+      display: block;
+      font-size: 15px;
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--white);
-      line-height: 1.2;
+      color: white;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
+    .nav-logo-text span {
+      font-size: 11px;
       color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    /* HERO */
+    #mainNav .nav-link {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color .2s;
+      position: relative;
+      padding: 8px 4px !important;
+    }
+
+    #mainNav .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .3s;
+    }
+
+    #mainNav .nav-link:hover {
+      color: var(--gold) !important;
+    }
+
+    #mainNav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* hamburger icon color */
+    #mainNav .navbar-toggler {
+      border-color: rgba(200, 168, 75, 0.5);
+    }
+
+    #mainNav .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(200,168,75,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* mobile dropdown bg */
+    @media (max-width: 991px) {
+      #mainNav .navbar-collapse {
+        background: rgba(10, 22, 40, 0.98);
+        padding: 16px 20px;
+        border-top: 1px solid rgba(200, 168, 75, 0.15);
+        margin-top: 8px;
+      }
+
+      #mainNav .nav-link {
+        padding: 10px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      #mainNav .nav-link:last-child {
+        border-bottom: none;
+      }
+    }
+
     .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, #1e4d8c 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 100px 2rem 4rem;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, #112255 100%);
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
+    .hero-bg {
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(201, 168, 76, 0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(200, 168, 75, 0.09) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(200, 168, 75, 0.07) 0%, transparent 50%);
     }
 
-    .hero-lines {
+    .hero-ring {
       position: absolute;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .hero-lines::before,
-    .hero-lines::after {
-      content: '';
-      position: absolute;
-      border: 1px solid rgba(201, 168, 76, 0.15);
       border-radius: 50%;
+      border: 1px solid rgba(200, 168, 75, 0.1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    .hero-lines::before {
-      width: 700px;
-      height: 700px;
-      top: -200px;
-      right: -200px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-lines::after {
-      width: 500px;
-      height: 500px;
-      bottom: -150px;
-      left: -150px;
-    }
-
-    .hero-year {
-      font-family: 'Mulish', sans-serif;
-      font-weight: 300;
-      font-size: 0.85rem;
-      letter-spacing: 0.3em;
+    .hero-since {
+      font-size: 13px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.8s ease both;
-      position: relative;
+      margin-bottom: 20px;
+      animation: fadeUp .9s .2s both;
     }
 
-    .hero h1 {
+    .hero-num {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-size: clamp(90px, 16vw, 160px);
       font-weight: 900;
       color: var(--white);
-      line-height: 1.05;
-      animation: fadeUp 0.8s 0.15s ease both;
-      position: relative;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(200, 168, 75, 0.2);
+      animation: fadeUp .9s .05s both;
     }
 
-    .hero h1 span {
+    .hero-num span {
       color: var(--gold);
     }
 
-    .hero-sub {
-      margin-top: 1.2rem;
-      font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.65);
+    .hero-title {
+      font-size: clamp(14px, 2.5vw, 22px);
+      color: rgba(255, 255, 255, 0.8);
       font-weight: 300;
-      letter-spacing: 0.04em;
-      animation: fadeUp 0.8s 0.3s ease both;
-      position: relative;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 8px;
+      animation: fadeUp .9s .3s both;
     }
 
     .hero-divider {
-      width: 80px;
+      width: 60px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 2.5rem auto;
-      animation: fadeUp 0.8s 0.45s ease both;
-      position: relative;
+      background: var(--gold);
+      margin: 28px auto;
+      animation: fadeUp .9s .4s both;
     }
 
-    .hero-stats {
-      display: flex;
-      gap: 4rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.6s ease both;
-      position: relative;
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: rgba(255, 255, 255, 0.5);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-top: 0.4rem;
+    .hero-subtitle {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 1px;
+      animation: fadeUp .9s .5s both;
     }
 
     .hero-cta {
-      margin-top: 3rem;
-      animation: fadeUp 0.8s 0.75s ease both;
-      position: relative;
+      margin-top: 40px;
+      animation: fadeUp .9s .6s both;
     }
 
-    .btn-gold {
+    .btn {
       display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.9rem 2.4rem;
+      padding: 14px 36px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
       text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       border-radius: 2px;
-      transition: background 0.25s, transform 0.2s;
+      transition: all .3s;
     }
 
-    .btn-gold:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 6rem 2rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      line-height: 1.1;
+    .btn:hover {
+      background: var(--gold);
       color: var(--navy);
     }
 
-    .section-line {
-      width: 50px;
-      height: 3px;
-      background: var(--gold);
-      margin: 1.5rem 0 2.5rem;
-    }
-
-    /* ABOUT */
-    .about {
-      background: var(--white);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .about-text p {
-      color: var(--gray);
-      line-height: 1.85;
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .year-block {
-      background: var(--navy);
-      color: var(--white);
-      padding: 3rem 2.5rem;
-      position: relative;
-    }
-
-    .year-block::after {
-      content: '';
+    .scroll-hint {
       position: absolute;
-      bottom: -12px;
-      right: -12px;
-      width: 100%;
-      height: 100%;
-      border: 2px solid var(--gold);
-      z-index: -1;
-    }
-
-    .year-big {
-      font-family: 'Playfair Display', serif;
-      font-size: 5rem;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1;
-    }
-
-    .year-desc {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      letter-spacing: 0.05em;
-    }
-
-    .year-since {
-      color: var(--white);
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-
-    /* CARDS */
-    .info-section {
-      background: var(--light-bg);
-    }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--white);
-      padding: 2rem;
-      border-top: 3px solid var(--gold);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(10, 22, 40, 0.1);
-    }
-
-    .card-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--navy);
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 1.2rem;
-      font-size: 1.3rem;
+      gap: 8px;
+      animation: bounce 2s infinite;
     }
 
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+    .scroll-hint span {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.35);
+      text-transform: uppercase;
     }
 
-    .card p {
-      color: var(--gray);
-      font-size: 0.92rem;
-      line-height: 1.6;
+    .scroll-hint::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(200, 168, 75, 0.6), transparent);
     }
 
-    .card a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    .card a:hover {
-      color: var(--gold);
-    }
-
-    /* MAP */
-    .map-section {
-      background: var(--navy);
-      padding: 6rem 2rem;
-    }
-
-    .map-section .section-title {
-      color: var(--white);
-    }
-
-    .map-section .section-label {
-      color: var(--gold-light);
-    }
-
-    .map-wrapper {
-      margin-top: 2.5rem;
-      border: 2px solid var(--gold);
-      overflow: hidden;
-    }
-
-    .map-wrapper iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-      display: block;
-    }
-
-    /* SOCIAL */
-    .social-section {
-      background: var(--cream);
-    }
-
-    .social-grid {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .social-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1rem 1.8rem;
-      background: var(--navy);
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: background 0.25s, transform 0.2s;
-      border-bottom: 3px solid var(--gold);
-    }
-
-    .social-btn:hover {
-      background: var(--blue);
-      transform: translateY(-2px);
-    }
-
-    .social-btn svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--gold);
-      flex-shrink: 0;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #060e1c;
-      color: rgba(255, 255, 255, 0.45);
-      text-align: center;
-      padding: 2.5rem 1rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.05em;
-      border-top: 2px solid var(--gold);
-    }
-
-    footer span {
-      color: var(--gold);
-    }
-
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(36px);
       }
 
       to {
@@ -507,29 +297,993 @@
       }
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+    .stats {
+      background: var(--navy);
+      padding: 70px 0;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(200, 168, 75, 0.18);
+    }
+
+    .stat-item {
+      background: var(--navy);
+      padding: 50px 40px;
+      text-align: center;
+      transition: background .3s;
+    }
+
+    .stat-item:hover {
+      background: #0f1e38;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 6vw, 72px);
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-plus {
+      font-size: 0.55em;
+      color: var(--gold-light);
+    }
+
+    .stat-label {
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .section-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--gold);
+      margin: 20px 0 36px;
+    }
+
+    .about {
+      background: var(--light-gray);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #4a5568;
+      margin-bottom: 18px;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-card {
+      background: var(--navy);
+      border-radius: 4px;
+      padding: 50px 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: var(--gold);
+      opacity: 0.06;
+      border-radius: 50%;
+      transform: translate(30px, -30px);
+    }
+
+    .about-card-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .about-card-text {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .about-bars {
+      display: flex;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .about-bars div {
+      height: 3px;
+      border-radius: 2px;
+      background: var(--gold);
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-weight: 800;
+      box-shadow: 0 8px 30px rgba(200, 168, 75, 0.4);
+    }
+
+    .about-badge strong {
+      font-size: 22px;
+      line-height: 1;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .about-badge span {
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: var(--navy);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact-info strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .contact-info p,
+    .contact-info a {
+      font-size: 15px;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .contact-info a:hover {
+      color: var(--gold);
+    }
+
+    .social-section {
+      background: var(--navy);
+      padding: 70px 0;
+    }
+
+    .social-inner {
+      text-align: center;
+    }
+
+    .social-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .social-sub {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border: 1px solid rgba(200, 168, 75, 0.3);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 2px;
+      transition: all .3s;
+      letter-spacing: 0.5px;
+    }
+
+    .social-link:hover {
+      border-color: var(--gold);
+      background: rgba(200, 168, 75, 0.08);
+      color: var(--gold);
+    }
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* ── LEADERSHIP ── */
+    .leadership {
+      background: var(--cream);
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 28px;
+    }
+
+    .leader-card {
+      text-align: center;
+      position: relative;
+    }
+
+    .leader-photo-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .leader-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      background: rgba(10, 22, 40, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      overflow: hidden;
+      margin: 0 auto;
+      transition: border-color .3s, box-shadow .3s;
+    }
+
+    .leader-photo:hover {
+      border-color: var(--navy);
+      box-shadow: 0 6px 24px rgba(200, 168, 75, 0.3);
+    }
+
+    .leader-photo svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .leader-photo span {
+      font-size: 9px;
+      color: rgba(10, 22, 40, 0.4);
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .leader-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    /* First card (director) is bigger */
+    .leader-card.director .leader-photo {
+      width: 150px;
+      height: 150px;
+      border-width: 4px;
+    }
+
+    .director-crown {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .leader-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .leader-role {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ── TEACHERS ── */
+    .teachers {
+      background: var(--navy);
+    }
+
+    .teachers .section-label {
+      color: var(--gold);
+    }
+
+    .teachers .section-title {
+      color: var(--white);
+    }
+
+    .teachers .section-divider {
+      background: var(--gold);
+    }
+
+    .teachers-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 50px;
+      max-width: 620px;
+    }
+
+    .teachers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 22px;
+    }
+
+    .teacher-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(200, 168, 75, 0.15);
+      border-radius: 4px;
+      padding: 24px 20px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .teacher-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--gold);
+      transition: height .3s;
+    }
+
+    .teacher-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(200, 168, 75, 0.4);
+    }
+
+    .teacher-card:hover::before {
+      height: 100%;
+    }
+
+    .teacher-photo-wrap {
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .teacher-photo-placeholder {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px dashed rgba(200, 168, 75, 0.4);
+      background: rgba(200, 168, 75, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+      transition: all .3s;
+    }
+
+    .teacher-photo-placeholder:hover {
+      border-color: var(--gold);
+      background: rgba(200, 168, 75, 0.1);
+    }
+
+    .teacher-photo-placeholder svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .teacher-photo-placeholder span {
+      font-size: 9px;
+      color: rgba(200, 168, 75, 0.6);
+      letter-spacing: 0.5px;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .teacher-photo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .teacher-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .teacher-subject {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .teacher-exp {
+      margin-top: 10px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding-top: 10px;
+    }
+
+    .teachers-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 56px;
+    }
+
+    .tf-item {
+      background: rgba(200, 168, 75, 0.06);
+      border: 1px solid rgba(200, 168, 75, 0.12);
+      border-radius: 4px;
+      padding: 28px 22px;
+      text-align: center;
+    }
+
+    .tf-icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .tf-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .tf-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.43);
+      line-height: 1.6;
+    }
+
+    /* ── STUDENTS / CLASSES ── */
+    .students {
+      background: var(--cream);
+    }
+
+    .grade-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .grade-tab {
+      padding: 10px 28px;
+      border: 2px solid rgba(10, 22, 40, 0.2);
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all .25s;
+      letter-spacing: 0.5px;
+    }
+
+    .grade-tab:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .grade-tab.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--gold);
+    }
+
+    .grade-panel {
+      display: none;
+    }
+
+    .grade-panel.active {
+      display: block;
+    }
+
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .class-block {
+      background: var(--white);
+      border-radius: 4px;
+      border: 1px solid rgba(10, 22, 40, 0.08);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(10, 22, 40, 0.06);
+      transition: box-shadow .3s, transform .3s;
+    }
+
+    .class-block:hover {
+      box-shadow: 0 6px 28px rgba(10, 22, 40, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .class-header {
+      background: var(--navy);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .class-badge {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .class-count {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 600;
+    }
+
+    .student-list {
+      padding: 6px 0;
+    }
+
+    .student-item {
+      padding: 8px 20px;
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 600;
+      border-bottom: 1px solid rgba(10, 22, 40, 0.05);
+      transition: background .15s;
+    }
+
+    .student-item:last-child {
+      border-bottom: none;
+    }
+
+    .student-item:hover {
+      background: rgba(200, 168, 75, 0.06);
+    }
+
+    .student-item.faded {
+      color: rgba(10, 22, 40, 0.35);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 12px;
     }
 
     @media (max-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+      .teachers-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .nav-links {
+      .teachers-features {
+        grid-template-columns: 1fr;
+      }
+
+      .classes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .teachers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .map-section {
+      background: var(--light-gray);
+    }
+
+    .map-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .map-address-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #4a5568;
+      font-weight: 600;
+    }
+
+    .btn-map {
+      display: inline-block;
+      padding: 11px 24px;
+      background: var(--navy);
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: all .3s;
+    }
+
+    .btn-map:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .map-wrapper {
+      border-radius: 4px;
+      overflow: hidden;
+      border: 3px solid rgba(10, 22, 40, 0.1);
+      box-shadow: 0 20px 60px rgba(10, 22, 40, 0.12);
+    }
+
+    .map-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 480px;
+      border: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060e1c;
+      border-top: 2px solid var(--gold);
+    }
+
+    .footer-main {
+      padding: 70px 0 50px;
+    }
+
+    .footer-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.4fr;
+      gap: 60px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .footer-logo-badge {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    .footer-logo strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .footer-logo span {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 22px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .fsoc-btn {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+      text-decoration: none;
+    }
+
+    .fsoc-btn:hover {
+      background: rgba(200, 168, 75, 0.15);
+      border-color: var(--gold);
+    }
+
+    .footer-heading {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(200, 168, 75, 0.2);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color .2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a::before {
+      content: '›';
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .footer-contact-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .fci-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .footer-contact-item p,
+    .footer-contact-item a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      text-decoration: none;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 20px 40px;
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      letter-spacing: 0.5px;
+    }
+
+    .footer-bottom strong {
+      color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-badge {
         display: none;
       }
 
-      .hero-stats {
-        gap: 2rem;
+      .hero-num {
+        font-size: 100px;
       }
     }
   </style>
@@ -537,163 +1291,879 @@
 
 <body>
 
-  <nav>
-    <div class="nav-logo">
-      <div class="badge">27</div>
-      <span>Tam Orta<br>Məktəb</span>
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand nav-logo" href="#">
+        <div class="nav-logo-badge">27</div>
+        <div class="nav-logo-text">
+          <strong>Məktəb №27</strong>
+          <span>Bakı · Xətai</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#about">Haqqımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teachers">Rəhbərlik</a></li>
+          <li class="nav-item"><a class="nav-link" href="#staff">Müəllimlər</a></li>
+          <li class="nav-item"><a class="nav-link" href="#students">Şagirdlər</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Əlaqə</a></li>
+        </ul>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#haqqinda">Haqqında</a></li>
-      <li><a href="#elaqe">Əlaqə</a></li>
-      <li><a href="#xerite">Xəritə</a></li>
-      <li><a href="#sosial">Sosial</a></li>
-    </ul>
   </nav>
 
-  <section class="hero">
-    <div class="hero-lines"></div>
-    <p class="hero-year">Bakı, Xətai Rayonu &middot; 1959-cu ildən</p>
-    <h1><span>27</span> Nömrəli<br>Tam Orta Məktəb</h1>
-    <p class="hero-sub">Keyfiyyətli təhsil, güclü gələcək</p>
-    <div class="hero-divider"></div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">108</div>
-        <div class="stat-label">Müəllim</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">2000+</div>
-        <div class="stat-label">Şaqird</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">65+</div>
-        <div class="stat-label">İl Təcrübə</div>
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-ring" style="width:700px;height:700px;"></div>
+    <div class="hero-ring" style="width:1100px;height:1100px;"></div>
+    <div class="hero-content">
+      <p class="hero-since">1959-cu ildən fəaliyyətdə</p>
+      <div class="hero-num"><span>#</span>27</div>
+      <p class="hero-title">Nömrəli Tam Orta Məktəb</p>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle">Bakı · Xətai Rayonu · Y. Səfərov küçəsi 7</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn">Ətraflı Oxu</a>
       </div>
     </div>
-    <div class="hero-cta">
-      <a href="#haqqinda" class="btn-gold">Ətraflı Tanış Ol</a>
-    </div>
+    <div class="scroll-hint"><span>Aşağı</span></div>
   </section>
 
-  <section class="about" id="haqqinda">
+  <div class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">108<span class="stat-plus">+</span></div>
+          <div class="stat-label">Müəllim</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2000<span class="stat-plus">+</span></div>
+          <div class="stat-label">Şagird</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">65<span class="stat-plus">+</span></div>
+          <div class="stat-label">İl Təcrübə</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-text reveal">
+        <div class="about-text">
           <p class="section-label">Haqqımızda</p>
-          <h2 class="section-title">Güclü Ənənə,<br>Parlaq Gələcək</h2>
-          <div class="section-line"></div>
-          <p>
-            27 Nömrəli Tam Orta Məktəb 1959-cu ildən etibarən Bakının Xətai rayonunda fəaliyyət göstərərək minlərlə
-            məzun yetişdirmiş, şəhərin ən köklü təhsil ocaqlarından birinə çevrilmişdir.
-          </p>
-          <p>
-            108 peşəkar müəllim heyəti ilə 2000-dən çox şaqirdə müasir, keyfiyyətli və şəxsiyyətyönümlü təhsil verilir.
-            Məktəbimiz akademik nailiyyətlər, mədəni tədbirlər və idman sahəsində daim öndə gəlir.
-          </p>
-          <p>
-            Yarım əsri aşan tariximiz boyunca cəmiyyətimizə töhfə verən həkim, mühəndis, müəllim və sənətkar nəsilləri
-            hazırlamışıq.
-          </p>
+          <h2 class="section-title">Keçmişdən gələcəyə körpü qururuq</h2>
+          <div class="section-divider"></div>
+          <p>27 Nömrəli Tam Orta Məktəb 1959-cu ildən etibarən Bakı şəhərinin Xətai rayonunda fasiləsiz fəaliyyət
+            göstərir. Onilliklər boyu minlərlə şagird bu məktəbin sıralarından keçərək cəmiyyətin layiqli üzvlərinə
+            çevrilmişdir.</p>
+          <p>Müasir tədris metodları, peşəkar müəllim heyəti və güclü akademik mühit sayəsində məktəbimiz Xətai
+            rayonunun aparıcı təhsil ocaqlarından biri kimi tanınır.</p>
+          <p>108-dən çox mütəxəssis müəllim və 2000-dən artıq şagirdi ilə məktəbimiz hər il yüksək nəticələr əldə etməyə
+            davam edir.</p>
         </div>
-        <div class="reveal" style="position:relative;">
-          <div class="year-block">
-            <div class="year-big">1959</div>
-            <div class="year-since">Fəaliyyət başladı</div>
-            <div style="margin-top:1.5rem; font-size:0.95rem; color:rgba(255,255,255,0.55); line-height:1.7;">
-              65 ildən artıq davam edən böyük bir təhsil yolculuğu — hər il yeni nəsillərə ilham verən bir ocaq.
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="about-card-year">1959</div>
+            <p class="about-card-text">Məktəbimiz bu ildən etibarən Azərbaycanın keyfiyyətli ümumi orta təhsil
+              müəssisələrindən birinə çevrilmişdir. 65 ildən artıq tariximiz var.</p>
+            <div class="about-bars">
+              <div style="flex:1;opacity:0.5;"></div>
+              <div style="flex:2;"></div>
+              <div style="flex:1;opacity:0.35;"></div>
             </div>
+          </div>
+          <div class="about-badge">
+            <strong>65+</strong>
+            <span>il</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="info-section" id="elaqe">
+  <!-- LEADERSHIP -->
+  <section class="leadership" id="teachers">
     <div class="container">
-      <p class="section-label reveal">Əlaqə &amp; Məlumat</p>
-      <h2 class="section-title reveal">Bizimlə Əlaqə<br>Saxlayın</h2>
-      <div class="section-line reveal"></div>
-      <div class="cards-grid">
-        <div class="card reveal">
-          <div class="card-icon">📞</div>
-          <h3>Telefon</h3>
-          <p><a href="tel:+994124902120">(012) 490 21 20</a></p>
+      <p class="section-label">Rəhbərlik</p>
+      <h2 class="section-title">Məktəb rəhbərliyi</h2>
+      <div class="section-divider"></div>
+
+      <div class="leadership-grid">
+
+        <!-- Director — bigger card -->
+        <div class="leader-card director">
+          <div class="leader-photo-wrap">
+            <div class="director-crown">Direktor</div>
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Direktor</div>
         </div>
-        <div class="card reveal">
-          <div class="card-icon">📍</div>
-          <h3>Ünvan</h3>
-          <p>Bakı şəhəri, Xətai rayonu,<br>Y. Səfərov küçəsi 7</p>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Direktor müavini</div>
         </div>
-        <div class="card reveal">
-          <div class="card-icon">👩‍🏫</div>
-          <h3>Müəllim Heyəti</h3>
-          <p>108 peşəkar pedaqoq<br>müxtəlif fənlər üzrə</p>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Direktor müavini</div>
         </div>
-        <div class="card reveal">
-          <div class="card-icon">🎓</div>
-          <h3>Şaqird Sayı</h3>
-          <p>2000-dən çox şaqird<br>aktiv təhsil alır</p>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Direktor müavini</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Mühasib</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Psixoloq</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Kitabxanaçı</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Tibb işçisi</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Sinif rəhbəri koordinatoru</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Əmək mühafizəsi</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <div class="leader-photo">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="leader-name">Ad Soyad</div>
+          <div class="leader-role">Təsərrüfat müdiri</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS / STAFF -->
+  <section class="teachers" id="staff">
+    <div class="container">
+      <p class="section-label">Müəllim Heyəti</p>
+      <h2 class="section-title">Peşəkar müəllimlərimiz</h2>
+      <div class="section-divider"></div>
+      <p class="teachers-intro">Məktəbimizin 108-dən çox müəllimi yüksək ixtisaslı mütəxəssislərdən ibarətdir. Hər biri
+        öz sahəsinin dərin bilicisi olan müəllim heyətimiz şagirdlərimizin hərtərəfli inkişafını təmin edir.</p>
+
+      <div class="teachers-grid">
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Rəhimova Aytən</div>
+          <div class="teacher-subject">Riyaziyyat</div>
+          <div class="teacher-exp">20+ il · Ali kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Məmmədov Elçin</div>
+          <div class="teacher-subject">Fizika</div>
+          <div class="teacher-exp">15+ il · Ali kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Həsənova Gülnar</div>
+          <div class="teacher-subject">Azərbaycan dili</div>
+          <div class="teacher-exp">18+ il · I kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">İsmayılov Tərlan</div>
+          <div class="teacher-subject">Kimya</div>
+          <div class="teacher-exp">12+ il · Ali kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Nəcəfova Sevinc</div>
+          <div class="teacher-subject">Biologiya</div>
+          <div class="teacher-exp">10+ il · I kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Quliyev Nicat</div>
+          <div class="teacher-subject">Tarix</div>
+          <div class="teacher-exp">14+ il · Ali kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Əliyeva Könül</div>
+          <div class="teacher-subject">İngilis dili</div>
+          <div class="teacher-exp">16+ il · Ali kateqoriya</div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <div class="teacher-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#c8a84b" stroke-width="1.5" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <span>Şəkil əlavə et</span>
+            </div>
+          </div>
+          <div class="teacher-name">Babayev Samir</div>
+          <div class="teacher-subject">İnformatika</div>
+          <div class="teacher-exp">8+ il · I kateqoriya</div>
+        </div>
+      </div>
+
+      <div class="teachers-features">
+        <div class="tf-item">
+          <div class="tf-icon">🎓</div>
+          <div class="tf-title">Ali Təhsil</div>
+          <div class="tf-desc">Bütün müəllimlər ali ixtisas təhsilinə malikdir</div>
+        </div>
+        <div class="tf-item">
+          <div class="tf-icon">📋</div>
+          <div class="tf-title">Sertifikasiya</div>
+          <div class="tf-desc">Mütəmadi attestasiya və peşəkar inkişaf proqramları</div>
+        </div>
+        <div class="tf-item">
+          <div class="tf-icon">🏆</div>
+          <div class="tf-title">Mükafatlar</div>
+          <div class="tf-desc">Çoxsaylı fəxri fərman və respublika mükafatı laureatları</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="map-section" id="xerite">
+  <!-- STUDENTS -->
+  <section class="students" id="students">
     <div class="container">
-      <p class="section-label reveal">Yerləşmə</p>
-      <h2 class="section-title reveal">Xəritədə Tapın</h2>
-      <div class="map-wrapper reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.4708477054965!2d49.86221462488175!3d40.37900883263693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d0386bf67e5%3A0x8caa81a918ffa2af!2zMjcgU2F5bMSxIHRhbSBvcnRhIG3JmWt0yZli!5e1!3m2!1saz!2saz!4v1772816787354!5m2!1saz!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="section-label">Şagirdlər</p>
+      <h2 class="section-title">Siniflərimiz və şagirdlərimiz</h2>
+      <div class="section-divider"></div>
+
+      <!-- Grade tabs -->
+      <div class="grade-tabs">
+        <button class="grade-tab active" onclick="showGrade('g10')">X Sinif</button>
+        <button class="grade-tab" onclick="showGrade('g11')">XI Sinif</button>
+        <button class="grade-tab" onclick="showGrade('g9')">IX Sinif</button>
+        <button class="grade-tab" onclick="showGrade('g8')">VIII Sinif</button>
+      </div>
+
+      <!-- Grade 10 -->
+      <div class="grade-panel active" id="g10">
+        <div class="classes-grid">
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">10A</span><span class="class-count">28 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Abdullayev Əli</div>
+              <div class="student-item">2. Babayeva Nigar</div>
+              <div class="student-item">3. Cəfərov Tural</div>
+              <div class="student-item">4. Əhmədova Aynur</div>
+              <div class="student-item">5. Həsənli Murad</div>
+              <div class="student-item">6. İsmayılova Könül</div>
+              <div class="student-item">7. Quliyev Elnur</div>
+              <div class="student-item">8. Məmmədova Leyla</div>
+              <div class="student-item faded">+ 20 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">10B</span><span class="class-count">30 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Ağayev Rauf</div>
+              <div class="student-item">2. Bəşirova Aytən</div>
+              <div class="student-item">3. Əliyev Kamran</div>
+              <div class="student-item">4. Həsənova Günel</div>
+              <div class="student-item">5. Hüseynov Şəhriyar</div>
+              <div class="student-item">6. Kərimli Zəhra</div>
+              <div class="student-item">7. Nəcəfov Orxan</div>
+              <div class="student-item">8. Rəhimova Səbinə</div>
+              <div class="student-item faded">+ 22 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">10C</span><span class="class-count">27 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Axundov Fərid</div>
+              <div class="student-item">2. Bayramova Lalə</div>
+              <div class="student-item">3. Cavadov Elvin</div>
+              <div class="student-item">4. Əsgərov Namiq</div>
+              <div class="student-item">5. Hümbətova Arzu</div>
+              <div class="student-item">6. Mehdiyev Kənan</div>
+              <div class="student-item">7. Rzayeva Türkan</div>
+              <div class="student-item">8. Salmanov Tərlan</div>
+              <div class="student-item faded">+ 19 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">10Ç</span><span class="class-count">29 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Allahverdiyev Rəşad</div>
+              <div class="student-item">2. Əlizadə Nərmin</div>
+              <div class="student-item">3. Hacıyev Azər</div>
+              <div class="student-item">4. İbrahimova Sevinc</div>
+              <div class="student-item">5. Musayev Elçin</div>
+              <div class="student-item">6. Nəsirov Vüsal</div>
+              <div class="student-item">7. Orucova Mədinə</div>
+              <div class="student-item">8. Şirinov Fuad</div>
+              <div class="student-item faded">+ 21 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">10D</span><span class="class-count">28 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Əhmədov Ceyhun</div>
+              <div class="student-item">2. Bağırova Ülviyyə</div>
+              <div class="student-item">3. Fərəcov Samir</div>
+              <div class="student-item">4. Hüseynova Xədicə</div>
+              <div class="student-item">5. Qədirov Murad</div>
+              <div class="student-item">6. Mustafayev Cavid</div>
+              <div class="student-item">7. Tahirova Aynur</div>
+              <div class="student-item">8. Yusifov Əziz</div>
+              <div class="student-item faded">+ 20 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">10E</span><span class="class-count">26 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Alıyev Kamran</div>
+              <div class="student-item">2. Cabbarlı Şəfəq</div>
+              <div class="student-item">3. Əliyeva Mirvari</div>
+              <div class="student-item">4. Hüseynli Rauf</div>
+              <div class="student-item">5. Kazımov Nicat</div>
+              <div class="student-item">6. Məmmədzadə Günel</div>
+              <div class="student-item">7. Süleymanov Elnur</div>
+              <div class="student-item">8. Vəliyeva Aytac</div>
+              <div class="student-item faded">+ 18 nəfər daha...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade 11 -->
+      <div class="grade-panel" id="g11">
+        <div class="classes-grid">
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">11A</span><span class="class-count">27 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Abbasov Rəşad</div>
+              <div class="student-item">2. Bayramova Arzu</div>
+              <div class="student-item">3. Cəfərli Elvin</div>
+              <div class="student-item">4. Əliyev Namiq</div>
+              <div class="student-item">5. Həsənova Nərmin</div>
+              <div class="student-item">6. Hüseynov Kənan</div>
+              <div class="student-item">7. Qurbanov Orxan</div>
+              <div class="student-item">8. Rəsulova Günel</div>
+              <div class="student-item faded">+ 19 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">11B</span><span class="class-count">25 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Aslanov Tural</div>
+              <div class="student-item">2. Bəkirova Lalə</div>
+              <div class="student-item">3. Əhmədov Şəhriyar</div>
+              <div class="student-item">4. Hümbətov Samir</div>
+              <div class="student-item">5. İsmayılov Fuad</div>
+              <div class="student-item">6. Kərimova Sevinc</div>
+              <div class="student-item">7. Mustafayev Azər</div>
+              <div class="student-item">8. Nəsirzadə Türkan</div>
+              <div class="student-item faded">+ 17 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">11C</span><span class="class-count">28 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Ağayeva Könül</div>
+              <div class="student-item">2. Cavadli Elnur</div>
+              <div class="student-item">3. Əsgərova Aynur</div>
+              <div class="student-item">4. Hacıyeva Mirvari</div>
+              <div class="student-item">5. Mehdiyev Vüsal</div>
+              <div class="student-item">6. Rzayev Ceyhun</div>
+              <div class="student-item">7. Salmanova Xədicə</div>
+              <div class="student-item">8. Tahirov Cavid</div>
+              <div class="student-item faded">+ 20 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">11Ç</span><span class="class-count">26 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Allahverdiyeva Aytən</div>
+              <div class="student-item">2. Babayev Murad</div>
+              <div class="student-item">3. Cəlilov Rauf</div>
+              <div class="student-item">4. Əlizadə Nigar</div>
+              <div class="student-item">5. Həsənli Elçin</div>
+              <div class="student-item">6. Hüseynova Ülviyyə</div>
+              <div class="student-item">7. Quliyeva Sabinə</div>
+              <div class="student-item">8. Yusifov Tərlan</div>
+              <div class="student-item faded">+ 18 nəfər daha...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade 9 -->
+      <div class="grade-panel" id="g9">
+        <div class="classes-grid">
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">9A</span><span class="class-count">31 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Abdullayeva Leyla</div>
+              <div class="student-item">2. Əhmədov Fərid</div>
+              <div class="student-item">3. Həsənov Elnur</div>
+              <div class="student-item">4. Hüseynova Günel</div>
+              <div class="student-item">5. İbrahimov Rauf</div>
+              <div class="student-item">6. Quliyev Samir</div>
+              <div class="student-item">7. Məmmədova Aytən</div>
+              <div class="student-item">8. Nəcəfov Tural</div>
+              <div class="student-item faded">+ 23 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">9B</span><span class="class-count">30 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Ağayev Nicat</div>
+              <div class="student-item">2. Bayramova Sevinc</div>
+              <div class="student-item">3. Cəfərova Arzu</div>
+              <div class="student-item">4. Əliyev Orxan</div>
+              <div class="student-item">5. Həsənli Könül</div>
+              <div class="student-item">6. Kazımov Kamran</div>
+              <div class="student-item">7. Rəhimov Vüsal</div>
+              <div class="student-item">8. Şirinova Nərmin</div>
+              <div class="student-item faded">+ 22 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">9C</span><span class="class-count">29 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Axundova Türkan</div>
+              <div class="student-item">2. Babayev Azər</div>
+              <div class="student-item">3. Cavadov Fuad</div>
+              <div class="student-item">4. Əsgərli Ceyhun</div>
+              <div class="student-item">5. Hümbətov Elnur</div>
+              <div class="student-item">6. Mehdiyeva Mirvari</div>
+              <div class="student-item">7. Rzayev Murad</div>
+              <div class="student-item">8. Salmanova Ülviyyə</div>
+              <div class="student-item faded">+ 21 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">9Ç</span><span class="class-count">28 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Alıyeva Sabinə</div>
+              <div class="student-item">2. Əhmədov Namiq</div>
+              <div class="student-item">3. Hacıyev Kənan</div>
+              <div class="student-item">4. İsmayılova Lalə</div>
+              <div class="student-item">5. Mustafayev Rauf</div>
+              <div class="student-item">6. Nəsirov Tərlan</div>
+              <div class="student-item">7. Orucov Şəhriyar</div>
+              <div class="student-item">8. Tahirova Aynur</div>
+              <div class="student-item faded">+ 20 nəfər daha...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade 8 -->
+      <div class="grade-panel" id="g8">
+        <div class="classes-grid">
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">8A</span><span class="class-count">32 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Abbasova Nigar</div>
+              <div class="student-item">2. Cəlilov Əli</div>
+              <div class="student-item">3. Əlizadə Murad</div>
+              <div class="student-item">4. Həsənov Samir</div>
+              <div class="student-item">5. Hüseynov Elvin</div>
+              <div class="student-item">6. Qurbanova Günel</div>
+              <div class="student-item">7. Məmmədzadə Arzu</div>
+              <div class="student-item">8. Rəsulova Aytən</div>
+              <div class="student-item faded">+ 24 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">8B</span><span class="class-count">31 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Aslanova Könül</div>
+              <div class="student-item">2. Bəkirov Orxan</div>
+              <div class="student-item">3. Cəfərli Rauf</div>
+              <div class="student-item">4. Əhmədova Sevinc</div>
+              <div class="student-item">5. Hümbətov Nicat</div>
+              <div class="student-item">6. Kərimov Vüsal</div>
+              <div class="student-item">7. Nəcəfova Türkan</div>
+              <div class="student-item">8. Süleymanov Ceyhun</div>
+              <div class="student-item faded">+ 23 nəfər daha...</div>
+            </div>
+          </div>
+          <div class="class-block">
+            <div class="class-header"><span class="class-badge">8C</span><span class="class-count">30 şagird</span>
+            </div>
+            <div class="student-list">
+              <div class="student-item">1. Allahverdiyev Tural</div>
+              <div class="student-item">2. Bayramov Fuad</div>
+              <div class="student-item">3. Cavadova Leyla</div>
+              <div class="student-item">4. Əsgərli Elnur</div>
+              <div class="student-item">5. Həsənova Nərmin</div>
+              <div class="student-item">6. Mustafayeva Mirvari</div>
+              <div class="student-item">7. Rzayeva Ülviyyə</div>
+              <div class="student-item">8. Yusifov Kamran</div>
+              <div class="student-item faded">+ 22 nəfər daha...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="map-section" id="map">
+    <div class="container">
+      <p class="section-label">Məkan</p>
+      <h2 class="section-title">Bizi xəritədə tapın</h2>
+      <div class="section-divider"></div>
+      <div class="map-top-bar">
+        <div class="map-address-info">
+          <span>📍</span>
+          <span>Bakı, Xətai rayonu, Y. Səfərov küçəsi 7 — 27 Nömrəli Tam Orta Məktəb</span>
+        </div>
+        <a href="https://maps.google.com/?q=27+Sayli+tam+orta+mekteb+Baki" target="_blank" class="btn-map">Google
+          Xəritədə Aç ↗</a>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.4708477054965!2d49.86221462488175!3d40.37900883263693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d0386bf67e5%3A0x8caa81a918ffa2af!2zMjcgU2F5bMSxIHRhbSBvcnRhIG3JmWt0yZli!5e1!3m2!1saz!2saz!4v1772816787354!5m2!1saz!2saz"
+          width="100%" height="480" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
 
-  <section class="social-section" id="sosial">
-    <div class="container">
-      <p class="section-label reveal">Sosial Şəbəkələr</p>
-      <h2 class="section-title reveal">Bizi İzləyin</h2>
-      <div class="section-line reveal"></div>
-      <div class="social-grid reveal">
-        <a href="https://www.facebook.com/27nomrelitamortamekteb/" target="_blank" class="social-btn">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
-          </svg>
-          Facebook
-        </a>
-        <a href="https://www.instagram.com/27_nomreli_tam_orta_mekteb/" target="_blank" class="social-btn">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-          </svg>
-          Instagram
-        </a>
-        <a href="https://www.youtube.com/@xtairayonu27nomrlitamortam50" target="_blank" class="social-btn">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-          </svg>
-          YouTube
-        </a>
+  <footer id="contact">
+    <div class="footer-main">
+      <div class="footer-container">
+
+        <!-- Col 1: Branding -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-badge">27</div>
+            <div>
+              <strong>Məktəb №27</strong>
+              <span>1959-cu ildən fəaliyyətdə</span>
+            </div>
+          </div>
+          <p class="footer-desc">Bakı şəhərinin Xətai rayonunda yerləşən 27 Nömrəli Tam Orta Məktəb yarım əsrdən artıq
+            keyfiyyətli təhsil ocağıdır.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/27nomrelitamortamekteb/" target="_blank" class="fsoc-btn"
+              title="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path d="M17 2h-2a3 3 0 0 0-3 3v2H8v4h4v8h4v-8h3l1-4h-4V5a1 1 0 0 1 1-1h2z" fill="#1877F2" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/27_nomreli_tam_orta_mekteb/" target="_blank" class="fsoc-btn"
+              title="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <defs>
+                  <linearGradient id="igf" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f09433" />
+                    <stop offset="100%" stop-color="#bc1888" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf)" />
+                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.8" />
+                <circle cx="17.5" cy="6.5" r="1.2" fill="white" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@xtairayonu27nomrlitamortam50" target="_blank" class="fsoc-btn"
+              title="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path
+                  d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.8 5 12 5 12 5s-4.8 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.8C6.8 19 12 19 12 19s4.8 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.4 2.8-5.4 2.7z"
+                  fill="#FF0000" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Sürətli Keçid</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Ana Səhifə</a></li>
+            <li><a href="#about">Haqqımızda</a></li>
+            <li><a href="#teachers">Rəhbərlik</a></li>
+            <li><a href="#staff">Müəllimlər</a></li>
+            <li><a href="#students">Şagirdlər</a></li>
+            <li><a href="#map">Ünvan</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Bizimlə Əlaqə</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="#c8a84b" width="16" height="16">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z" />
+              </svg>
+              <div>
+                <span class="fci-label">Telefon</span>
+                <a href="tel:+994124902120">(012) 490 21 20</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="#c8a84b" width="16" height="16">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
+              </svg>
+              <div>
+                <span class="fci-label">Ünvan</span>
+                <p>Bakı, Xətai rayonu,<br>Y. Səfərov küçəsi 7</p>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="#c8a84b" width="16" height="16">
+                <path d="M17 2h-2a3 3 0 0 0-3 3v2H8v4h4v8h4v-8h3l1-4h-4V5a1 1 0 0 1 1-1h2z" />
+              </svg>
+              <div>
+                <span class="fci-label">Facebook</span>
+                <a href="https://www.facebook.com/27nomrelitamortamekteb/" target="_blank">27nomrelitamortamekteb</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <defs>
+                  <linearGradient id="igfi" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f09433" />
+                    <stop offset="100%" stop-color="#bc1888" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igfi)" />
+                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.8" />
+                <circle cx="17.5" cy="6.5" r="1.2" fill="white" />
+              </svg>
+              <div>
+                <span class="fci-label">Instagram</span>
+                <a href="https://www.instagram.com/27_nomreli_tam_orta_mekteb/"
+                  target="_blank">27_nomreli_tam_orta_mekteb</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path
+                  d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.8 5 12 5 12 5s-4.8 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.8C6.8 19 12 19 12 19s4.8 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.4 2.8-5.4 2.7z"
+                  fill="#FF0000" />
+              </svg>
+              <div>
+                <span class="fci-label">YouTube</span>
+                <a href="https://www.youtube.com/@xtairayonu27nomrlitamortam50" target="_blank">YouTube Kanalımız</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
 
-  <footer>
-    <p><strong>Desing by MERS</strong> &copy; 2026</p>
+    <div class="footer-bottom">
+      <p>© 2026 · <strong>27 Nömrəli Tam Orta Məktəb</strong> · Bakı, Xətai Rayonu</p>
+      <p>Design by <strong>MERS</strong> © 2026</p>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 80);
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(r => observer.observe(r));
+    function showGrade(id) {
+      document.querySelectorAll('.grade-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.grade-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
   </script>
 </body>
 
