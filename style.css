@@ -23,6 +23,37 @@
       background: var(--cream);
       color: var(--navy);
       overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Kursor */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #007bff;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+
+    .cursor-outline {
+      width: 35px;
+      height: 35px;
+      border: 2px solid rgba(0, 123, 255, 0.5);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease-out;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+      transition: opacity 0.2s ease-in-out;
+      pointer-events: none;
     }
 
     /* ── NAV ── */
@@ -1764,7 +1795,7 @@
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/dilaver_residova.png) center/cover;
+      background: url(img/Dilaver_Residova.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
@@ -1774,7 +1805,7 @@
       transition: 0.5s;
     }
 
-    .konul_esedova{
+    .konul_esedova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1785,12 +1816,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .konul_esedova:hover{
+    .konul_esedova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .terane_gencmeliyeva{
+    .terane_gencmeliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1801,12 +1832,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .terane_gencmeliyeva:hover{
+    .terane_gencmeliyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .xudabaxisova_aygun{
+    .xudabaxisova_aygun {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1817,12 +1848,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .xudabaxisova_aygun:hover{
+    .xudabaxisova_aygun:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .sakine_novruzova{
+    .sakine_novruzova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1833,12 +1864,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .sakine_novruzova:hover{
+    .sakine_novruzova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .vusale_qurbanova{
+    .vusale_qurbanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1849,12 +1880,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .vusale_qurbanova:hover{
+    .vusale_qurbanova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .sevda_mahmudova{
+    .sevda_mahmudova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1865,12 +1896,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .sevda_mahmudova:hover{
+    .sevda_mahmudova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .nazaket_aliyeva{
+    .nazaket_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1881,12 +1912,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .nazaket_aliyeva:hover{
+    .nazaket_aliyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .sima_abbasova{
+    .sima_abbasova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1897,12 +1928,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .sima_abbasova:hover{
+    .sima_abbasova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .inna_shulyanova{
+    .inna_shulyanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1913,12 +1944,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .inna_shulyanova:hover{
+    .inna_shulyanova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
-    
-    .gulnara_haciyeva{
+
+    .gulnara_haciyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1929,12 +1960,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .gulnara_haciyeva:hover{
+    .gulnara_haciyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .rana_efendiyeva{
+    .rana_efendiyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1945,12 +1976,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .rana_efendiyeva:hover{
+    .rana_efendiyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .aygun_abdulrehimova{
+    .aygun_abdulrehimova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1961,12 +1992,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .aygun_abdulrehimova:hover{
+    .aygun_abdulrehimova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .aliyexanim_rahimova{
+    .aliyexanim_rahimova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1977,12 +2008,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .aliyexanim_rahimova:hover{
+    .aliyexanim_rahimova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .turanə_mirzeyeva{
+    .turanə_mirzeyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1993,12 +2024,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .turanə_mirzeyeva:hover{
+    .turanə_mirzeyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .irada_kazimova{
+    .irada_kazimova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2008,13 +2039,13 @@
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
-    
-    .irada_kazimova:hover{
+
+    .irada_kazimova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .guler_ahmadova{
+    .guler_ahmadova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2025,12 +2056,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .guler_ahmadova:hover{
+    .guler_ahmadova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .sueyla_aliyeva{
+    .sueyla_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2041,12 +2072,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .sueyla_aliyeva:hover{
+    .sueyla_aliyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
-    }   
+    }
 
-    .kira_korneyeva{
+    .kira_korneyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2057,12 +2088,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .kira_korneyeva:hover{
+    .kira_korneyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .lale_aliyadzade{
+    .lale_aliyadzade {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2073,12 +2104,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .lale_aliyadzade:hover{
+    .lale_aliyadzade:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .merziyye_elili{
+    .merziyye_elili {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2089,12 +2120,12 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .merziyye_elili:hover{
+    .merziyye_elili:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
 
-    .samire_afiyyet{
+    .samire_afiyyet {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2105,7 +2136,7 @@
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .samire_afiyyet:hover{
+    .samire_afiyyet:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
