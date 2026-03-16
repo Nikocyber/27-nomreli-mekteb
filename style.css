@@ -30,7 +30,7 @@
     .cursor-dot {
       width: 8px;
       height: 8px;
-      background-color: #007bff;
+      background-color: #ffffff;
       border-radius: 50%;
       position: fixed;
       pointer-events: none;
@@ -41,7 +41,7 @@
     .cursor-outline {
       width: 35px;
       height: 35px;
-      border: 2px solid rgba(0, 123, 255, 0.5);
+      border: 2px solid rgb(255, 255, 255);
       border-radius: 50%;
       position: fixed;
       pointer-events: none;
@@ -1789,6 +1789,38 @@
       transition: 0.5s;
     }
 
+    .gulana_aliyeva_ibtidai{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/Gulana_Aliyeva_ibtidai.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .gulana_aliyeva_ibtidai:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .khayala_orucova_ibtidai{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/Khayala_Orucova_ibtidai.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .khayala_orucova_ibtidai:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
     .dilaver_residova {
       width: 110px;
       min-height: 110px;
@@ -1827,7 +1859,7 @@
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/terane_gencmeliyeva.png) center/cover;
+      background: url(img/terane_gencmaliyeva.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
@@ -1907,12 +1939,44 @@
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/nazaket_aliyeva.png) center/cover;
+      background: url(img/nezaket_aliyeva.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
     .nazaket_aliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .gulnar_musayeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/gulnar_musayeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .gulnar_musayeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .humay_qahramanova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/humay_qahramanova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .humay_qahramanova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
@@ -1939,7 +2003,7 @@
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/inna_shulyanova.png) center/cover;
+      background: url(img/inna_sulyanova.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
@@ -1965,13 +2029,72 @@
       transition: 0.5s;
     }
 
+    .narmin_elekberova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/narmin_elekberova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .narmin_elekberova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .konul_isayeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/konul_isayeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .konul_isayeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .saida_israfilli{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/saida_israfilli.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .saida_israfilli:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .sahar_safarova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sahar_safarova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
     .rana_efendiyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/rana_efendiyeva.png) center/cover;
+      background: url(img/rena_efendiyeva.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
@@ -1987,7 +2110,7 @@
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/aygun_abdulrehimova.png) center/cover;
+      background: url(img/aygun_Abdulrahimova.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
@@ -2013,6 +2136,38 @@
       transition: 0.5s;
     }
 
+    .metanet_veliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/metanet_veliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .metanet_veliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .sehla_qasimova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sehla_qasimova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .sehla_qasimova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
     .turanə_mirzeyeva {
       width: 110px;
       min-height: 110px;
@@ -2025,6 +2180,38 @@
     }
 
     .turanə_mirzeyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .tahir_babayev{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/tahir_babayev.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .tahir_babayev:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .fazile_isgenderova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/fazile_isgenderova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .fazile_isgenderova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
@@ -2045,18 +2232,18 @@
       transition: 0.5s;
     }
 
-    .guler_ahmadova {
+    .guler_ahmedova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
       border-radius: 50%;
       align-content: center;
-      background: url(img/guler_ahmadova.png) center/cover;
+      background: url(img/guler_ahmedova.png) center/cover;
       cursor: pointer;
       transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
     }
 
-    .guler_ahmadova:hover {
+    .guler_ahmedova:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
@@ -2089,6 +2276,38 @@
     }
 
     .kira_korneyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .sabina_cavadova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sabina_cavadova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .sabina_cavadova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .xanim_aliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/xanim_aliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .xanim_aliyeva:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
@@ -2141,6 +2360,774 @@
       transition: 0.5s;
     }
 
+    .ulviyye_resulova {
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/ulviyye_resulova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .ulviyye_resulova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .konul_abbasova {
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/konul_abbasova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .konul_abbasova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .gulara_aliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/gulara_aliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .gulara_aliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .aida_ismayilova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/aida_ismayilova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .aida_ismayilova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .elnara_ismayilova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/elnara_ismayilova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .elnara_ismayilova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .sevinc_mamedova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sevinc_mamedova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .sevinc_mamedova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .ofelya_ismayilova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/ofelya_ismayilova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .ofelya_ismayilova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .nargiz_valiyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/nargiz_valiyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .nargiz_valiyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .gulara_yadigarova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/gulara_yadigarova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .gulara_yadigarova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .aynur_huseynova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/aynur_huseynova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .aynur_huseynova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .ilaha_novruzova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/ilaha_novruzova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .ilaha_novruzova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .samire_ibadova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/samire_ibadova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .samire_ibadova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .ilaha_qarayeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/ilaha_qarayeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .ilaha_qarayeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .konul_panahova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/konul_panahova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .konul_panahova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .aynur_murselova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/aynur_murselova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .aynur_murselova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    
+    }
+
+    .elina_aliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/elina_aliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .elina_aliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .emil_gaybaliyev{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/emil_gaybaliyev.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .emil_gaybaliyev:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .tahmina_aliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/tahmina_aliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .tahmina_aliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .mushfiq_abdullayev{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/mushfiq_abdullayev.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .mushfiq_abdullayev:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .cinare_islamova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/cinare_islamova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .cinare_islamova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .etibar_abdullayev{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/etibar_abdullayev.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .etibar_abdullayev:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .farid_ahmedov{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/farid_ahmedov.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .farid_ahmedov:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .olesya_deynekova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/olesya_deynekova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .olesya_deynekova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+    
+    .sabina_aliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sabina_aliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .sabina_aliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .miri_abdullayev{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/miri_abdullayev.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .miri_abdullayev:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .nurane_nebiyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/nurane_nebiyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .nurane_nebiyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .zulfiyye_qafarova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/zulfiyye_qafarova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .zulfiyye_qafarova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .nurlana_celilzade{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/nurlana_celilzade.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .nurlana_celilzade:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .nurana_samedova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/nurana_samedova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .nurana_samedova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .gunay_musayeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/gunay_musayeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .gunay_musayeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .selime_quliyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/selime_quliyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .selime_quliyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .elmira_esgerova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/elmira_esgerova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .elmira_esgerova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .gulnar_ahmadova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/gulnar_ahmadova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .gulnar_ahmadova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .elvin_selimov{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/elvin_selimov.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .elvin_selimov:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .namiye_haciyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/namiye_haciyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .namiye_haciyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .qasimzade_guler{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/qasimzade_guler.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .qasimzade_guler:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .sevda_novruzova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sevda_novruzova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .sevda_novruzova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .mehriban_qadasova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/mehriban_qadasova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .mehriban_qadasova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .aygun_azizova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/aygun_azizova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .aygun_azizova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .ayten_ceyiyeva{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/ayten_ceyiyeva.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .ayten_ceyiyeva:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .terane_zeynalova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/terane_zeynalova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .terane_zeynalova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .sevda_abishova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/sevda_abishova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .sevda_abishova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .afet_terlanova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/afet_terlanova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .afet_terlanova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .rena_zamanova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/rena_zamanova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .rena_zamanova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .maryem_dadashova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/maryem_dadashova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .maryem_dadashova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .xanim_ramazanova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/xanim_ramazanova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .xanim_ramazanova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .leyla_sultanova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/leyla_sultanova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .leyla_sultanova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    .turkan_zamanova{
+      width: 110px;
+      min-height: 110px;
+      justify-items: center;
+      border-radius: 50%;
+      align-content: center;
+      background: url(img/turkan_zamanova.png) center/cover;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .turkan_zamanova:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
     .bi-youtube {
       color: red;
     }
