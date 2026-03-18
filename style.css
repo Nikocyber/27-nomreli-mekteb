@@ -1164,6 +1164,11 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
     }
 
     .footer-bottom p {
