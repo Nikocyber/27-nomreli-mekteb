@@ -1248,13 +1248,14 @@
     }
 
     .direktor {
-      width: 200px;
-      min-height: 220px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/direktor.png) center/cover;
+      background: url(img/direktor.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .direktor:hover {
@@ -1263,13 +1264,13 @@
 
     .ayten {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/Ayten.png) center/cover;
+      background: url(img/Ayten.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .ayten:hover {
@@ -1279,13 +1280,13 @@
 
     .xatire {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/xatire.png) center/cover;
+      background: url(img/xatire.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .xatire:hover {
@@ -1295,13 +1296,13 @@
 
     .ulviyye {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/ulviyye.png) center/cover;
+      background: url(img/ulviyye.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .ulviyye:hover {
@@ -1311,13 +1312,13 @@
 
     .ferqane {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/ferqane.png) center/cover;
+      background: url(img/ferqane.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .ferqane:hover {
@@ -1327,13 +1328,13 @@
 
     .leyla_psixoloq {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/leyla_psixoloq.png) center/cover;
+      background: url(img/leyla_psixoloq.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .leyla_psixoloq:hover {
@@ -1343,13 +1344,13 @@
 
     .sebnem_psixoloq {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/sebnem_psixoloq.png) center/cover;
+      background: url(img/sebnem_psixoloq.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .sebnem_psixoloq:hover {
@@ -1359,13 +1360,13 @@
 
     .sevda_muavin_teserrufat {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/sevda_muavin.png) center/cover;
+      background: url(img/sevda_muavin.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .sevda_muavin_teserrufat:hover {
@@ -1375,13 +1376,13 @@
 
     .aide {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/aide.png) center/cover;
+      background: url(img/aide.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .aide:hover {
@@ -1391,13 +1392,13 @@
 
     .gonce {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/qonce.png) center/cover;
+      background: url(img/qonce.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .gonce:hover {
@@ -1407,19 +1408,21 @@
 
     .kemale {
       width: 150px;
-      min-height: 170px;
-      justify-items: center;
+      height: 150px;
       border-radius: 50%;
-      align-content: center;
-      background: url(img/kemale_kitabxanaci.png) center/cover;
+      background: url(img/kemale_kitabxanaci.png) no-repeat;
+      background-size: 100%;
+      background-position: 45% 1%;
       cursor: pointer;
-      transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .kemale:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
+
+
 
     .meleyke_elekberova_ibtidai {
       width: 110px;
@@ -1789,7 +1792,7 @@
       transition: 0.5s;
     }
 
-    .gulana_aliyeva_ibtidai{
+    .gulana_aliyeva_ibtidai {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1805,7 +1808,7 @@
       transition: 0.5s;
     }
 
-    .khayala_orucova_ibtidai{
+    .khayala_orucova_ibtidai {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1949,7 +1952,7 @@
       transition: 0.5s;
     }
 
-    .gulnar_musayeva{
+    .gulnar_musayeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -1965,7 +1968,7 @@
       transition: 0.5s;
     }
 
-    .humay_qahramanova{
+    .humay_qahramanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2029,7 +2032,7 @@
       transition: 0.5s;
     }
 
-    .narmin_elekberova{
+    .narmin_elekberova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2045,7 +2048,7 @@
       transition: 0.5s;
     }
 
-    .konul_isayeva{
+    .konul_isayeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2061,7 +2064,7 @@
       transition: 0.5s;
     }
 
-    .saida_israfilli{
+    .saida_israfilli {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2077,7 +2080,7 @@
       transition: 0.5s;
     }
 
-    .sahar_safarova{
+    .sahar_safarova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2136,7 +2139,7 @@
       transition: 0.5s;
     }
 
-    .metanet_veliyeva{
+    .metanet_veliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2152,7 +2155,7 @@
       transition: 0.5s;
     }
 
-    .sehla_qasimova{
+    .sehla_qasimova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2184,7 +2187,7 @@
       transition: 0.5s;
     }
 
-    .tahir_babayev{
+    .tahir_babayev {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2200,7 +2203,7 @@
       transition: 0.5s;
     }
 
-    .fazile_isgenderova{
+    .fazile_isgenderova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2280,7 +2283,7 @@
       transition: 0.5s;
     }
 
-    .sabina_cavadova{
+    .sabina_cavadova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2296,7 +2299,7 @@
       transition: 0.5s;
     }
 
-    .xanim_aliyeva{
+    .xanim_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2392,7 +2395,7 @@
       transition: 0.5s;
     }
 
-    .gulara_aliyeva{
+    .gulara_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2408,7 +2411,7 @@
       transition: 0.5s;
     }
 
-    .aida_ismayilova{
+    .aida_ismayilova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2424,7 +2427,7 @@
       transition: 0.5s;
     }
 
-    .elnara_ismayilova{
+    .elnara_ismayilova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2440,7 +2443,7 @@
       transition: 0.5s;
     }
 
-    .sevinc_mamedova{
+    .sevinc_mamedova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2456,7 +2459,7 @@
       transition: 0.5s;
     }
 
-    .ofelya_ismayilova{
+    .ofelya_ismayilova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2472,7 +2475,7 @@
       transition: 0.5s;
     }
 
-    .nargiz_valiyeva{
+    .nargiz_valiyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2488,7 +2491,7 @@
       transition: 0.5s;
     }
 
-    .gulara_yadigarova{
+    .gulara_yadigarova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2504,7 +2507,7 @@
       transition: 0.5s;
     }
 
-    .aynur_huseynova{
+    .aynur_huseynova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2520,7 +2523,7 @@
       transition: 0.5s;
     }
 
-    .ilaha_novruzova{
+    .ilaha_novruzova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2536,7 +2539,7 @@
       transition: 0.5s;
     }
 
-    .samire_ibadova{
+    .samire_ibadova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2552,7 +2555,7 @@
       transition: 0.5s;
     }
 
-    .ilaha_qarayeva{
+    .ilaha_qarayeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2568,7 +2571,7 @@
       transition: 0.5s;
     }
 
-    .konul_panahova{
+    .konul_panahova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2584,7 +2587,7 @@
       transition: 0.5s;
     }
 
-    .aynur_murselova{
+    .aynur_murselova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2598,10 +2601,10 @@
     .aynur_murselova:hover {
       transform: scale(1.1);
       transition: 0.5s;
-    
+
     }
 
-    .elina_aliyeva{
+    .elina_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2617,7 +2620,7 @@
       transition: 0.5s;
     }
 
-    .emil_gaybaliyev{
+    .emil_gaybaliyev {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2633,7 +2636,7 @@
       transition: 0.5s;
     }
 
-    .tahmina_aliyeva{
+    .tahmina_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2649,7 +2652,7 @@
       transition: 0.5s;
     }
 
-    .mushfiq_abdullayev{
+    .mushfiq_abdullayev {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2665,7 +2668,7 @@
       transition: 0.5s;
     }
 
-    .cinare_islamova{
+    .cinare_islamova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2681,7 +2684,7 @@
       transition: 0.5s;
     }
 
-    .etibar_abdullayev{
+    .etibar_abdullayev {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2697,7 +2700,7 @@
       transition: 0.5s;
     }
 
-    .farid_ahmedov{
+    .farid_ahmedov {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2713,7 +2716,7 @@
       transition: 0.5s;
     }
 
-    .olesya_deynekova{
+    .olesya_deynekova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2728,8 +2731,8 @@
       transform: scale(1.1);
       transition: 0.5s;
     }
-    
-    .sabina_aliyeva{
+
+    .sabina_aliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2745,7 +2748,7 @@
       transition: 0.5s;
     }
 
-    .miri_abdullayev{
+    .miri_abdullayev {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2761,7 +2764,7 @@
       transition: 0.5s;
     }
 
-    .nurane_nebiyeva{
+    .nurane_nebiyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2777,7 +2780,7 @@
       transition: 0.5s;
     }
 
-    .zulfiyye_qafarova{
+    .zulfiyye_qafarova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2793,7 +2796,7 @@
       transition: 0.5s;
     }
 
-    .nurlana_celilzade{
+    .nurlana_celilzade {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2809,7 +2812,7 @@
       transition: 0.5s;
     }
 
-    .nurana_samedova{
+    .nurana_samedova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2825,7 +2828,7 @@
       transition: 0.5s;
     }
 
-    .gunay_musayeva{
+    .gunay_musayeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2841,7 +2844,7 @@
       transition: 0.5s;
     }
 
-    .selime_quliyeva{
+    .selime_quliyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2857,7 +2860,7 @@
       transition: 0.5s;
     }
 
-    .elmira_esgerova{
+    .elmira_esgerova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2873,7 +2876,7 @@
       transition: 0.5s;
     }
 
-    .gulnar_ahmadova{
+    .gulnar_ahmadova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2889,7 +2892,7 @@
       transition: 0.5s;
     }
 
-    .elvin_selimov{
+    .elvin_selimov {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2905,7 +2908,7 @@
       transition: 0.5s;
     }
 
-    .namiye_haciyeva{
+    .namiye_haciyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2921,7 +2924,7 @@
       transition: 0.5s;
     }
 
-    .qasimzade_guler{
+    .qasimzade_guler {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2937,7 +2940,7 @@
       transition: 0.5s;
     }
 
-    .sevda_novruzova{
+    .sevda_novruzova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2953,7 +2956,7 @@
       transition: 0.5s;
     }
 
-    .mehriban_qadasova{
+    .mehriban_qadasova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2969,7 +2972,7 @@
       transition: 0.5s;
     }
 
-    .aygun_azizova{
+    .aygun_azizova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -2985,7 +2988,7 @@
       transition: 0.5s;
     }
 
-    .ayten_ceyiyeva{
+    .ayten_ceyiyeva {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3001,7 +3004,7 @@
       transition: 0.5s;
     }
 
-    .terane_zeynalova{
+    .terane_zeynalova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3017,7 +3020,7 @@
       transition: 0.5s;
     }
 
-    .sevda_abishova{
+    .sevda_abishova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3033,7 +3036,7 @@
       transition: 0.5s;
     }
 
-    .afet_terlanova{
+    .afet_terlanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3049,7 +3052,7 @@
       transition: 0.5s;
     }
 
-    .rena_zamanova{
+    .rena_zamanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3065,7 +3068,7 @@
       transition: 0.5s;
     }
 
-    .maryem_dadashova{
+    .maryem_dadashova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3081,7 +3084,7 @@
       transition: 0.5s;
     }
 
-    .xanim_ramazanova{
+    .xanim_ramazanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3097,7 +3100,7 @@
       transition: 0.5s;
     }
 
-    .leyla_sultanova{
+    .leyla_sultanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3113,7 +3116,7 @@
       transition: 0.5s;
     }
 
-    .turkan_zamanova{
+    .turkan_zamanova {
       width: 110px;
       min-height: 110px;
       justify-items: center;
@@ -3128,6 +3131,7 @@
       transform: scale(1.1);
       transition: 0.5s;
     }
+
     .bi-youtube {
       color: red;
     }
