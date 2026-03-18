@@ -50,3 +50,23 @@ window.addEventListener("mousemove", (e) => {
         outline.style.opacity = "1";
     }
 });
+
+function makeRoundFavicon(src) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d');
+    const img = new Image();
+    img.onload = function () {
+        ctx.beginPath();
+        ctx.arc(32, 32, 32, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        ctx.drawImage(img, 0, 0, 64, 64);
+        const link = document.querySelector("link[rel~='icon']");
+        link.href = canvas.toDataURL('image/png');
+    };
+    img.src = src;
+}
+
+makeRoundFavicon('img/Logo.png');
